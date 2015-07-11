@@ -31,6 +31,12 @@
     color: #4A4A4A;
 }
 
+@media only screen and (max-width: 900px) {
+    .comments-count {
+        display: none;
+    }
+}
+
 @-webkit-keyframes fade-in-up {
     0% {
         opacity: 0;
