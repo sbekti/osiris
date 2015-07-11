@@ -12,6 +12,7 @@ config = {
     production: {
         url: 'http://bekti.io',
         mail: {
+          from: '"Bekti I/O" <noreply@bekti.io>',
           transport: 'SMTP',
           options: {
               service: 'Mailgun',
