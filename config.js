@@ -10,8 +10,17 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://blog.bekti.io',
-        mail: {},
+        url: 'http://bekti.io',
+        mail: {
+          transport: 'SMTP',
+          options: {
+              service: 'Mailgun',
+              auth: {
+                  user: 'postmaster@bekti.io',
+                  pass: '73ad4cf236a3c60f3f0604d4854e4ff9'
+              }
+          }
+        },
         database: {
             client: 'sqlite3',
             connection: {
