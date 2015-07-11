@@ -1,9 +1,9 @@
 {
   "name": "osiris",
   "version": "0.1.0",
-  "description": "Bekti I/O portfolio website.",
+  "description": "Bekti I/O website.",
   "author": "Samudra Harapan Bekti",
-  "homepage": "http://blog.bekti.io",
+  "homepage": "http://bekti.io",
   "keywords": [
     "bekti",
     "portfolio"
