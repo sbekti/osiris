@@ -1,0 +1,52 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+<header class="main-header tag-head {{#if tag.image}}" style="background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {{/if}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{tag.name}}</h1>
+            <h2 class="page-description">
+                {{#if tag.description}}
+                    {{tag.description}}
+                {{else}}
+                    A {{pagination.total}}-post collection
+                {{/if}}
+            </h2>
+        </div>
+    </div>
+</header>
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+  <div class="container portfolio-container">
+  {{#grouped_each 3 posts}}
+      <div class="row portfolio-row">
+      {{#each this }}
+        <div class="col-md-4 portfolio-item">
+            <a href="{{url}}">
+                <img class="img-responsive" src="{{image}}" alt="{{{meta_title}}}">
+            </a>
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{meta_title}}</a></h2>
+            </header>
+            <section class="portfolio-excerpt">
+                <p>{{meta_description}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </section>
+        </div>
+      {{/each}}
+      </div>
+  {{/grouped_each}}
+  </div>
+
+  {{! Previous/next page links - displayed on every page }}
+  {{pagination}}
+
+</main>

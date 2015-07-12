@@ -31,6 +31,15 @@
     color: #4A4A4A;
 }
 
+.portfolio-excerpt p {
+    font-size: 0.9em;
+    line-height: 1.7em;
+}
+
+.portfolio-item img {
+    margin-bottom: 16px;
+}
+
 @media only screen and (max-width: 900px) {
     .comments-count {
         display: none;
