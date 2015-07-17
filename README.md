@@ -1,2 +1,2 @@
 # osiris
-Bekti I/O portfolio website.
+The code that powers Bekti I/O.
