@@ -1,23 +1,25 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-<div class="container" role="document">
+<div class="listing" role="document">
 
-  <div class="jumbotron">
+  <div class="entry">
+
     <h1>{{tag.name}}</h1>
-    <p>
+    <p class="lead">
       {{#if tag.description}}
         {{tag.description}}
       {{else}}
         A {{pagination.total}}-post collection
       {{/if}}
     </p>
+
+    {{! The main content area on the homepage }}
+    <main class="content" role="main">
+      {{! The tag below includes the post loop - partials/loop.hbs }}
+      {{> "loop"}}
+    </main>
+
   </div>
 
-  {{! The main content area on the homepage }}
-  <main class="content" role="main">
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
-  </main>
-  
 </div>

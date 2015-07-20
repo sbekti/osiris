@@ -219,8 +219,20 @@ function renderChannel(channelOpts) {
                         result = formatPageResponse(posts, page);
                     }
 
-                    setResponseContext(req, res);
-                    res.render(view, result);
+                    if (view == 'home') {
+                      var portfolioOptions = {
+                        tag: 'portfolio',
+                        limit: 6
+                      };
+                      api.posts.browse(portfolioOptions).then(function(portfolio) {
+                        result.portfolio = portfolio.posts;
+                        setResponseContext(req, res);
+                        res.render(view, result);
+                      });
+                    } else {
+                      setResponseContext(req, res);
+                      res.render(view, result);
+                    }
                 });
             });
         }).catch(handleError(next));

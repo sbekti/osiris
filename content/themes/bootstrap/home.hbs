@@ -1,0 +1,38 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="listing" role="document">
+
+  <div class="entry">
+    <div class="page-header">
+      <h1>Portfolio <span class="small"><a href="{{@blog.url}}/tag/portfolio">View All</a></span></h1>
+    </div>
+    <div class="container-fluid portfolio-container">
+      {{#grouped_each 3 portfolio}}
+        <div class="row portfolio-row">
+          {{#each this }}
+            <div class="col-md-4 portfolio-item">
+              <a href="{{url}}">
+                <img class="img-responsive" src="{{image}}" alt="{{{meta_title}}}">
+              </a>
+              <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{meta_title}}</a></h2>
+              </header>
+              <section class="portfolio-excerpt">
+                <p>{{meta_description}}</p>
+              </section>
+            </div>
+          {{/each}}
+        </div>
+      {{/grouped_each}}
+    </div>
+
+    <div class="page-header">
+      <h1>Blog</h1>
+    </div>
+    <main id="content" class="content" role="main">
+      {{> "loop"}}
+    </main>
+  </div>
+
+</div>

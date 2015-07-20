@@ -5,23 +5,22 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 
+<div class="listing" role="document">
 
-<div class="container" role="document">
+  <div class="entry">
 
-  {{#post}}
+    {{#post}}
 
-    <div class="jumbotron">
-      <h1>{{title}}</h1>
-    </div>
+      <main class="content" role="main">
+        <article class="{{post_class}}">
+          <section class="post-content">
+            {{content}}
+          </section>
+        </article>
+      </main>
+      
+    {{/post}}
 
-    <main class="content" role="main">
-      <article class="{{post_class}}">
-        <section class="post-content">
-          {{content}}
-        </section>
-      </article>
-    </main>
-
-  {{/post}}
+  </div>
 
 </div>
