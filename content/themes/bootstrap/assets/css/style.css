@@ -44,7 +44,7 @@ p img {
 
 .post-content img {
   display: block;
-  max-width: 126%;
+  max-width: 100%;
   height: auto;
   padding: 1em 0;
   /* Centers an image by (1) pushing its left edge to the
