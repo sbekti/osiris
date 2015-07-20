@@ -38,6 +38,28 @@ p img {
 .page-header {
   margin-top: 0;
 }
+
+/* Keep images centered, and allow images wider than the main
+   text column to break out. */
+
+.post-content img {
+  display: block;
+  max-width: 126%;
+  height: auto;
+  padding: 1em 0;
+  /* Centers an image by (1) pushing its left edge to the
+       center of its container and (2) shifting the entire image
+       in the opposite direction by half its own width.
+       Works for images that are larger than their containers. */
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  /* for Safari and iOS */
+  -ms-transform: translateX(-50%);
+  /* for IE9 */
+  transform: translateX(-50%);
+}
+
 /*
  * Masthead
  */
@@ -254,14 +276,14 @@ p img {
   border-radius: 100%;
 }
 .author-profile .author-image {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 120px;
-    height: 120px;
-    padding: 3px;
-    margin: 0 auto 0 auto;
-    box-shadow: none;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 120px;
+  height: 120px;
+  padding: 3px;
+  margin: 0 auto 0 auto;
+  box-shadow: none;
 }
 .post-footer {
   border-top: 1px solid #eee;
@@ -299,21 +321,22 @@ p img {
 .portfolio-container {
   padding: 0;
 }
+.portfolio-item {
+  font-size: 0.8rem;
+}
 .portfolio-item .post-title {
+  font-size: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.2rem;
 }
 .portfolio-excerpt p {
   margin-bottom: 20px;
 }
-span.small {
-  font-weight: 300;
-  font-size: 0.8rem;
-}
 
 /*
  * Footers
  */
+
 .mobile-footer {
   margin-top: 40px;
   display: none;
