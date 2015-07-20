@@ -6,6 +6,7 @@ html {
   font-size: 18px;
 }
 body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -340,9 +341,29 @@ span.small {
 /*
  * Footers
  */
-
+.footer {
+  text-align: center;
+}
+.footer-nav {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.footer-nav-link {
+  font-size: 0.8rem;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: #d5dbde 1px solid;
+}
+.footer-nav-link:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
 .mobile-footer {
   margin-top: 40px;
+  display: none;
+}
+.footer-nav {
   display: none;
 }
 @media (max-width: 768px) {
@@ -350,6 +371,9 @@ span.small {
     display: none;
   }
   .mobile-footer {
+    display: block;
+  }
+  .footer-nav {
     display: block;
   }
 }
@@ -361,5 +385,5 @@ span.small {
 .copyright {
   text-align: center;
   font-size: 0.6rem;
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
 }
