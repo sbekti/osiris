@@ -332,6 +332,10 @@ p img {
 .portfolio-excerpt p {
   margin-bottom: 20px;
 }
+span.small {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
 
 /*
  * Footers
