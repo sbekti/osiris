@@ -220,6 +220,10 @@ p img {
  * Posts
  */
 
+.post-content a {
+  color: #337ab7;
+}
+
 .post-footer {
   margin: 1rem 0;
 }
